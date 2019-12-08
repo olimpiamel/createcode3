@@ -1,0 +1,42 @@
+<%= form_with(model: creation, local: true) do |form| %>
+  <% if creation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(creation.errors.count, "error") %> prohibited this creation from being saved:</h2>
+
+      <ul>
+      <% creation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br />
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origin %><br />
+    <%= form.text_field :origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Your_text %><br />
+    <%= form.text_area :totran %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %><br />
+    <%= form.text_field :destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_alias %><br />
+    <%= form.text_field :user_alias %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

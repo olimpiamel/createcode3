@@ -1,0 +1,51 @@
+<% provide(:title, "Creations") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @creation.title %>
+    </p>
+
+    <p>
+      <strong>Origin:</strong>
+      <%= @creation.origin %>
+    </p>
+
+    <p>
+      <strong>Totran:</strong>
+      <%= @creation.totran %>
+    </p>
+
+    <p>
+      <strong>Destination:</strong>
+      <%= @creation.destination %>
+    </p>
+
+    <p>
+      <strong>Translated:</strong>
+      <div id= "textmodif">
+      <%= @creation.totran %>
+      </div>
+    </p>
+
+    <p>
+      <strong>User alias:</strong>
+      <%= @creation.user_alias %>
+    </p>
+
+    <%= link_to 'Back', creations_path, class: "btn btn-sm btn-success" %>
+    <br />
+    <br />
+    <div class="embed-responsive embed-responsive-16by9">
+      <%= image_tag("diversity.jpg", alt: "Diversity image", size: "800x600") %>
+
+  </body>
+</html>

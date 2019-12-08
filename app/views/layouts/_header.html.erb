@@ -1,0 +1,21 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <a href="../static_pages/index" id="logo">CreateCode</a>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+
+        <% if creator_signed_in? %>
+          <li class="singlelink"><%= link_to "Home", root_url %></li>
+          <li class="singlelink"><%= link_to "Saved translations", creations_path %></li>
+          <li class="singlelink"><%= link_to "Translate", new_creation_path %></li>
+          <li class="singlelink"><%= link_to "Forum", contingency_path %></li>
+          <li class="singlelink"><%= link_to "Sign out", destroy_creator_session_path, method: :delete %></li>
+        <% else %>
+          <li class="singlelink"><%= link_to "Log in", new_creator_session_path %></li>
+          <li class="singlelink"><%= link_to "Sign up", new_creator_registration_path %></li>
+        <% end %>
+
+      </ul>
+    </nav>
+  </div>
+</header>

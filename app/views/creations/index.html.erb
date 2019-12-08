@@ -1,0 +1,49 @@
+<% provide(:title, "Creations") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+
+    <p id="notice"><%= notice %></p>
+
+    <h1>The best translation platform!</h1>
+    <div class="row">
+      <div class="spacer"></div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <%= link_to 'Start translating', new_creation_path, class: "btn btn-sm btn-success" %>
+              <div class="spacer"></div><br />
+              <p class="phrase">Translate your texts in the easiest way!</p>
+              <p class="phrase">Just click on the above button</p>
+              <p class="phrase">All fields of the form are required</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="prop_index">
+                <% @creations.each do |creation| %>
+                <div class="indivprop">
+                  <p<strong>Title: </strong><%= creation.title %></p>
+                  <p><strong>Translated language: </strong><%= creation.origin %></p>
+                  <p><strong>Text to translate: </strong><%= creation.totran %></p>
+                  <p><strong>Destination language: </strong><%= creation.destination %></p>
+                  <p><strong>Translated text: </strong><div id= "textmodif"><%= creation.totran %></div></p>
+                  <p><strong>Creator name: </strong><%= creation.user_alias %></p>
+                  <p><%= link_to 'show', creation_path(creation) %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+  </body>
+</html>

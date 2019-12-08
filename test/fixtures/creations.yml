@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  origin: MyString
+  totran: MyText
+  destination: MyString
+  translated: MyText
+  user_alias: MyString
+
+two:
+  title: MyString
+  origin: MyString
+  totran: MyText
+  destination: MyString
+  translated: MyText
+  user_alias: MyString
