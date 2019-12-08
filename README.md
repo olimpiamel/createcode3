@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CREATECODE
 
-Things you may want to cover:
+Createcode is an application to translate text between 2 languages. The functionality is not fully implemented and needs further development.
 
-* Ruby version
+Ruby version: 2.6.5
 
-* System dependencies
+Rails version: 5.2.4
 
-* Configuration
+System dependencies: bootstrap, jquery, devise, colatra (local gem)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Database creation: sqlite3
